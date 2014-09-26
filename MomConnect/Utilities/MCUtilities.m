@@ -10,4 +10,29 @@
 
 @implementation MCUtilities
 
++ (BOOL)isUserLoggedIn {
+    
+    BOOL loggedin = NO;
+    
+    //Check if there is a valid auth token saved
+    
+    return loggedin;
+}
+
++ (instancetype)getLoggedInUser {
+    
+    //Retreive the user details from the User Defaults
+    
+    return nil;
+}
+
++ (BOOL)saveLoggedInUser:(id)user {
+    
+    BOOL saved = NO;
+    
+    //Save the details in the User Defaults
+    
+    return saved;
+}
+
 @end

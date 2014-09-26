@@ -10,4 +10,8 @@
 
 @interface MCUtilities : NSObject
 
++ (BOOL)isUserLoggedIn;
+
++ (instancetype)getLoggedInUser;
++ (BOOL)saveLoggedInUser:(id)user;
 @end

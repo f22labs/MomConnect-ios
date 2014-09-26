@@ -8,14 +8,13 @@
 
 #import "MCHomeViewController.h"
 #import "MCHomeViewLayout.h"
+#import "MCHomeViewCell.h"
 
 @interface MCHomeViewController ()
 
 @end
 
 @implementation MCHomeViewController
-
-static NSString * const reuseIdentifier = @"Cell";
 
 - (instancetype)init {
     
@@ -34,7 +33,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.title = @"Mom Connect";
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[MCHomeViewCell class] forCellWithReuseIdentifier:[MCHomeViewCell reuseIdentifier]];
     
 }
 
@@ -53,23 +52,23 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MCHomeViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[MCHomeViewCell reuseIdentifier] forIndexPath:indexPath];
     
     // Configure the cell
     
     switch (indexPath.row) {
         case 0:
-            cell.backgroundColor = [UIColor cyanColor];
+            cell.title = @"Add a tip";
             break;
         
         case 1:
-            cell.backgroundColor = [UIColor greenColor];
+            cell.title = @"Subscribe a patient";
             break;
         case 2:
-            cell.backgroundColor = [UIColor blueColor];
+            cell.title = @"View tips";
             break;
         default:
-            cell.backgroundColor = [UIColor yellowColor];
+            cell.title = @"About Us";
             break;
     }
     
@@ -87,7 +86,7 @@ static NSString * const reuseIdentifier = @"Cell";
 // Uncomment this method to specify if the specified item should be selected
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return NO;
+    return YES;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -18,6 +18,7 @@
 		7CFD4AEB19D5CDAA00005FE5 /* MCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AEA19D5CDAA00005FE5 /* MCHomeViewController.m */; };
 		7CFD4AEE19D5CE4200005FE5 /* MCHomeViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AED19D5CE4200005FE5 /* MCHomeViewLayout.m */; };
 		7CFD4AF119D5CF7C00005FE5 /* MCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AF019D5CF7C00005FE5 /* MCUtilities.m */; };
+		7CFD4AF719D5D4CC00005FE5 /* MCHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AF619D5D4CC00005FE5 /* MCHomeViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		7CFD4AED19D5CE4200005FE5 /* MCHomeViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHomeViewLayout.m; sourceTree = "<group>"; };
 		7CFD4AEF19D5CF7C00005FE5 /* MCUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUtilities.h; sourceTree = "<group>"; };
 		7CFD4AF019D5CF7C00005FE5 /* MCUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUtilities.m; sourceTree = "<group>"; };
+		7CFD4AF219D5D37600005FE5 /* MCAppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAppConstants.h; sourceTree = "<group>"; };
+		7CFD4AF519D5D4CC00005FE5 /* MCHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHomeViewCell.h; sourceTree = "<group>"; };
+		7CFD4AF619D5D4CC00005FE5 /* MCHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHomeViewCell.m; sourceTree = "<group>"; };
 		EF631199123C407D90581AC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,6 +184,7 @@
 			children = (
 				7CFD4AEF19D5CF7C00005FE5 /* MCUtilities.h */,
 				7CFD4AF019D5CF7C00005FE5 /* MCUtilities.m */,
+				7CFD4AF219D5D37600005FE5 /* MCAppConstants.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -196,6 +201,8 @@
 		7CFD4AE319D5CD4200005FE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD4AF519D5D4CC00005FE5 /* MCHomeViewCell.h */,
+				7CFD4AF619D5D4CC00005FE5 /* MCHomeViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +346,7 @@
 				7CFD4AE819D5CD4200005FE5 /* main.m in Sources */,
 				7CFD4AE419D5CD4200005FE5 /* AppDelegate.m in Sources */,
 				7CFD4AEB19D5CDAA00005FE5 /* MCHomeViewController.m in Sources */,
+				7CFD4AF719D5D4CC00005FE5 /* MCHomeViewCell.m in Sources */,
 				7CFD4AF119D5CF7C00005FE5 /* MCUtilities.m in Sources */,
 				7CFD4AEE19D5CE4200005FE5 /* MCHomeViewLayout.m in Sources */,
 			);
