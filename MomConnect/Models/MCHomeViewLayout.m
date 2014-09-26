@@ -17,7 +17,7 @@
     MCHomeViewLayout *homeViewLayout = [[MCHomeViewLayout alloc] init];
     homeViewLayout.minimumLineSpacing = HOME_CELL_SPACING;
     homeViewLayout.minimumInteritemSpacing = HOME_CELL_SPACING;
-    CGFloat itemWidth = roundf((width - 3*HOME_CELL_SPACING)/2);
+    CGFloat itemWidth = floor((width - 3*HOME_CELL_SPACING)/2);
     homeViewLayout.itemSize = CGSizeMake(itemWidth, itemWidth);
     homeViewLayout.sectionInset = UIEdgeInsetsMake(HOME_CELL_SPACING, HOME_CELL_SPACING, HOME_CELL_SPACING, HOME_CELL_SPACING);
     return homeViewLayout;
