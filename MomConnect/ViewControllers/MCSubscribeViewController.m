@@ -18,9 +18,12 @@
 @interface MCSubscribeViewController () <UITextFieldDelegate>
 {
     NSArray *_locale;
-
 }
+
 @property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UITextField *nameField;
+@property (nonatomic, strong) UITextField *phoneField;
+@property (nonatomic, strong) UIDatePicker *datePicker;
 @end
 
 @implementation MCSubscribeViewController
@@ -55,6 +58,7 @@
     name.clearButtonMode = UITextFieldViewModeWhileEditing;
     name.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 //    name.delegate = self;
+    self.nameField = name;
     [self.view addSubview:name];
     
     
@@ -77,6 +81,7 @@
     phone.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 //    phone.delegate = self;
     phone.keyboardType = UIKeyboardTypeDecimalPad;
+    self.phoneField = phone;
     [self.view addSubview:phone];
 
     
@@ -88,6 +93,7 @@
     UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(HOME_CELL_SPACING, 280+START_HEIGHT, width-2*HOME_CELL_SPACING, 40)];
     [self.view addSubview:datePicker];
     datePicker.datePickerMode = UIDatePickerModeDate;
+    self.datePicker = datePicker;
     [self.view bringSubviewToFront:phone];
     
 //    [[UILabel appearanceWhenContainedIn:[UITableView class], [UIDatePicker class],nil] setBackgroundColor:[UIColor redColor]];
@@ -108,6 +114,17 @@
     [tView setText:[_locale objectAtIndex:row]];
 
     return tView;
+}
+
+#pragma mark -
+
+- (NSString *)getDateString {
+    
+    NSDate *date = [self.datePicker date];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *dateStr = [formatter stringFromDate:date];
+    return dateStr;
 }
 
 #pragma mark -
@@ -167,7 +184,7 @@
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
     //POST /tips parameters are what: "eat your food" and when: 19 (it means on 19th  day from coneption)
-    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"users" urlParameters:@{@"user": @{@"phone_number":self.textView.text,@"date":self.textView.text,@"locale"}} requestType:PostRequestType successBlock:^(id response) {
+    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"users" urlParameters:@{@"user": @{@"phone_number":self.phoneField.text,@"date":[self getDateString],@"locale":@1}} requestType:PostRequestType successBlock:^(id response) {
         
         NSLog(@"response: %@",response);
         
