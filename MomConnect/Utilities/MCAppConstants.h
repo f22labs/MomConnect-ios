@@ -31,7 +31,7 @@ _Pragma("clang diagnostic pop") \
 
 #define BACK_BUTTON_TEXT @""
 
-#define MCAPP_BUILD_BASE_URL @""
+#define MCAPP_BUILD_BASE_URL @"http://momconnect.herokuapp.com"
 
 //Home Screen
 

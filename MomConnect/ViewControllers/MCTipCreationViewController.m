@@ -179,15 +179,20 @@
 
 - (void)doneBtnClicked:(id)sender {
     
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
     //POST /tips parameters are what: "eat your food" and when: 19 (it means on 19th  day from coneption)
-    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"tips/" urlParameters:@{@"what":self.textView.text, @"when":@""} requestType:PostRequestType successBlock:^(id response) {
+    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"tips" urlParameters:@{@"what":self.textView.text, @"when":self.dayTextField.text} requestType:PostRequestType successBlock:^(id response) {
         
         NSLog(@"response: %@",response);
         
         [self.navigationController popViewControllerAnimated:YES];
         
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+        
     } failureBlock:^(NSError *error) {
         NSLog(@"error: %@",error.description);
+        self.navigationItem.rightBarButtonItem.enabled = YES;
     }];
 }
 

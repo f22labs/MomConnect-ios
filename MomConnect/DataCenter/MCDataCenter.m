@@ -93,8 +93,8 @@
 #define ACCEPT_AUTH_TOKEN_KEY @"OWQwMjJmZDI2OTJhNGYzYjRhNDJjNjQ3OGE3ZWZj"
 
 - (void)setAcceptHeadersforManager:(AFHTTPRequestOperationManager *)manager {
-    [manager.requestSerializer setValue:ACCEPT_HEADER_VALUE forHTTPHeaderField:ACCEPT_HEADER_KEY];
-    [manager.requestSerializer setValue:@"" forHTTPHeaderField:ACCEPT_AUTH_TOKEN_KEY];
+//    [manager.requestSerializer setValue:ACCEPT_HEADER_VALUE forHTTPHeaderField:ACCEPT_HEADER_KEY];
+//    [manager.requestSerializer setValue:@"" forHTTPHeaderField:ACCEPT_AUTH_TOKEN_KEY];
 }
 
 @end

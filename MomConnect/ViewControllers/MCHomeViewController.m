@@ -40,7 +40,6 @@
     
     // Register cell classes
     [self.collectionView registerClass:[MCHomeViewCell class] forCellWithReuseIdentifier:[MCHomeViewCell reuseIdentifier]];
-    
 }
 
 
