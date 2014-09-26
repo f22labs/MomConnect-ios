@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22E88C6E180147CEBC686AC6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF631199123C407D90581AC1 /* libPods.a */; };
+		7697550519D5EC8000F467F0 /* MCSubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7697550319D5EC8000F467F0 /* MCSubscribeViewController.m */; };
+		76D33C0D19D604AD006E4020 /* PhoneField.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D33C0C19D604AD006E4020 /* PhoneField.m */; };
 		7CFD4ABC19D5BF0500005FE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4ABB19D5BF0500005FE5 /* Images.xcassets */; };
 		7CFD4ACB19D5BF0500005FE5 /* MomConnectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4ACA19D5BF0500005FE5 /* MomConnectTests.m */; };
 		7CFD4AE419D5CD4200005FE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AD619D5CD4200005FE5 /* AppDelegate.m */; };
@@ -48,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		400BEC11E3F04839BD45D921 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7697550219D5EC8000F467F0 /* MCSubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSubscribeViewController.h; sourceTree = "<group>"; };
+		7697550319D5EC8000F467F0 /* MCSubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSubscribeViewController.m; sourceTree = "<group>"; };
+		76D33C0B19D604AD006E4020 /* PhoneField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneField.h; sourceTree = "<group>"; };
+		76D33C0C19D604AD006E4020 /* PhoneField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneField.m; sourceTree = "<group>"; };
 		7CFD4AAB19D5BF0500005FE5 /* MomConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MomConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFD4ABB19D5BF0500005FE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7CFD4AC419D5BF0500005FE5 /* MomConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +240,8 @@
 				7CFD4AEF19D5CF7C00005FE5 /* MCUtilities.h */,
 				7CFD4AF019D5CF7C00005FE5 /* MCUtilities.m */,
 				7CFD4AF219D5D37600005FE5 /* MCAppConstants.h */,
+				76D33C0B19D604AD006E4020 /* PhoneField.h */,
+				76D33C0C19D604AD006E4020 /* PhoneField.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +253,8 @@
 				7CFD4B0119D5E6F500005FE5 /* MCTipCreationViewController.m */,
 				7CFD4AE919D5CDAA00005FE5 /* MCHomeViewController.h */,
 				7CFD4AEA19D5CDAA00005FE5 /* MCHomeViewController.m */,
+				7697550219D5EC8000F467F0 /* MCSubscribeViewController.h */,
+				7697550319D5EC8000F467F0 /* MCSubscribeViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -487,6 +497,7 @@
 				7CFD4B0C19D5EEDE00005FE5 /* MCNavigationBarManager.m in Sources */,
 				7CFD4AEB19D5CDAA00005FE5 /* MCHomeViewController.m in Sources */,
 				7CFD4AF719D5D4CC00005FE5 /* MCHomeViewCell.m in Sources */,
+				7697550519D5EC8000F467F0 /* MCSubscribeViewController.m in Sources */,
 				7CFD4AF119D5CF7C00005FE5 /* MCUtilities.m in Sources */,
 				7CFD4B2719D5FF7000005FE5 /* PSPDFUIKitMainThreadGuard.m in Sources */,
 				7CFD4B0A19D5EEDE00005FE5 /* MCBackNavigationButtonView.m in Sources */,
@@ -495,6 +506,7 @@
 				7CFD4B0219D5E6F500005FE5 /* MCTipCreationViewController.m in Sources */,
 				7CFD4B1319D5FEFB00005FE5 /* MCDataCenter.m in Sources */,
 				7CFD4AEE19D5CE4200005FE5 /* MCHomeViewLayout.m in Sources */,
+				76D33C0D19D604AD006E4020 /* PhoneField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
