@@ -9,6 +9,7 @@
 #import "MCHomeViewController.h"
 #import "MCHomeViewLayout.h"
 #import "MCHomeViewCell.h"
+#import "MCSubscribeViewController.h"
 
 @interface MCHomeViewController ()
 
@@ -96,11 +97,14 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
     switch (indexPath.row) {
-        case 0:
+        case 0:{
             //Add a tip
+        }
             break;
-        case 1:
-            //Subscribe a patient
+        case 1:{
+            MCSubscribeViewController *subscribeVC = [[MCSubscribeViewController alloc] init];
+            [self.navigationController pushViewController:subscribeVC animated:YES];
+            }
             break;
         case 2:
             //View tips
