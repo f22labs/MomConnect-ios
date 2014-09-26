@@ -10,6 +10,8 @@
 #import "MCUtilities.h"
 #import "PhoneField.h"
 #import "MCAppConstants.h"
+#import "MCNavigationBarManager.h"
+#import "MCDataCenter.h"
 
 #define START_HEIGHT 0
 
@@ -35,15 +37,17 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"+ Patient";
-    // Do any additional setup after loading the view from its nib.
+
+    [[MCNavigationBarManager sharedManager] applyPropertiesForPropertyKey:@"navbar-type4" toViewController:self withTitleView:nil];
+    self.navigationItem.rightBarButtonItem.enabled = YES;
     
     CGFloat width = CGRectGetWidth(self.view.frame);
+    
     
     
     UITextField *name = [[UITextField alloc] initWithFrame:CGRectMake(HOME_CELL_SPACING, 80+START_HEIGHT, width-2*HOME_CELL_SPACING, 40)];
     name.borderStyle = UITextBorderStyleRoundedRect;
     name.font = [MCUtilities dinSystemAlternateBoldFontWithSize:15.0];
-    name.font = [UIFont systemFontOfSize:15];
     name.placeholder = @"Patient Name";
     name.autocorrectionType = UITextAutocorrectionTypeNo;
     name.keyboardType = UIKeyboardTypeDefault;
@@ -158,14 +162,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)doneBtnClicked:(id)sender {
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
+    //POST /tips parameters are what: "eat your food" and when: 19 (it means on 19th  day from coneption)
+    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"users" urlParameters:@{@"user": @{@"phone_number":self.textView.text,@"date":self.textView.text,@"locale"}} requestType:PostRequestType successBlock:^(id response) {
+        
+        NSLog(@"response: %@",response);
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+        
+    } failureBlock:^(NSError *error) {
+        NSLog(@"error: %@",error.description);
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }];
 }
-*/
 
 @end
