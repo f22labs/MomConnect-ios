@@ -18,7 +18,7 @@
 
 - (instancetype)init {
     
-    self = [super initWithCollectionViewLayout:[MCHomeViewLayout getHomeViewLayout]];
+    self = [super initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
     
     return self;
 }
@@ -29,6 +29,8 @@
     [super viewDidLoad];
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    [self.collectionView setCollectionViewLayout:[MCHomeViewLayout getHomeViewLayoutWithWidth:CGRectGetWidth(self.collectionView.frame)]];
     
     self.title = @"Mom Connect";
     
@@ -92,5 +94,21 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:
+            //Add a tip
+            break;
+        case 1:
+            //Subscribe a patient
+            break;
+        case 2:
+            //View tips
+            break;
+            
+        default:
+            //About Us
+            break;
+    }
 }
 @end

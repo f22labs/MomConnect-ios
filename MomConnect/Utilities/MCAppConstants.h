@@ -31,3 +31,4 @@ _Pragma("clang diagnostic pop") \
 //Home Screen
 
 #define HOME_CELL_ITEM_SIZE 130.0
+#define HOME_CELL_SPACING 20.0

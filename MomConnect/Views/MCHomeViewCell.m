@@ -37,7 +37,7 @@
     
     self.clipsToBounds = YES;
     
-    self.titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectInset(self.bounds, 10, 10)];
     self.titleLabel.numberOfLines = 0;
     self.titleLabel.font = [MCUtilities dinSystemAlternateBoldFontWithSize:15.0];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;

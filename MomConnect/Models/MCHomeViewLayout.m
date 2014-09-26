@@ -12,13 +12,14 @@
 
 @implementation MCHomeViewLayout
 
-+ (MCHomeViewLayout *)getHomeViewLayout {
++ (MCHomeViewLayout *)getHomeViewLayoutWithWidth:(CGFloat)width {
     
     MCHomeViewLayout *homeViewLayout = [[MCHomeViewLayout alloc] init];
-    homeViewLayout.minimumLineSpacing = 20.0;
-    homeViewLayout.minimumInteritemSpacing = 20.0;
-    homeViewLayout.itemSize = CGSizeMake(HOME_CELL_ITEM_SIZE, HOME_CELL_ITEM_SIZE);
-    homeViewLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+    homeViewLayout.minimumLineSpacing = HOME_CELL_SPACING;
+    homeViewLayout.minimumInteritemSpacing = HOME_CELL_SPACING;
+    CGFloat itemWidth = roundf((width - 3*HOME_CELL_SPACING)/2);
+    homeViewLayout.itemSize = CGSizeMake(itemWidth, itemWidth);
+    homeViewLayout.sectionInset = UIEdgeInsetsMake(HOME_CELL_SPACING, HOME_CELL_SPACING, HOME_CELL_SPACING, HOME_CELL_SPACING);
     return homeViewLayout;
 }
 

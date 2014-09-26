@@ -10,6 +10,6 @@
 
 @interface MCHomeViewLayout : UICollectionViewFlowLayout
 
-+ (MCHomeViewLayout *)getHomeViewLayout;
++ (MCHomeViewLayout *)getHomeViewLayoutWithWidth:(CGFloat)width;
 
 @end
