@@ -27,8 +27,18 @@ _Pragma("clang diagnostic pop") \
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define UIColorFromRGBA(rgbValue, a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:((float)a)]
 
+//Global
+
+#define BACK_BUTTON_TEXT @""
+
+#define MCAPP_BUILD_BASE_URL @""
 
 //Home Screen
 
 #define HOME_CELL_ITEM_SIZE 130.0
 #define HOME_CELL_SPACING 20.0
+
+
+//Tip Creation
+
+#define TIP_COMPOSE_MAXIMUM_CHARS 140
