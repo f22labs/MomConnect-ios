@@ -10,6 +10,24 @@
 
 @implementation MCUtilities
 
+#pragma mark - Fonts
+
++ (UIFont *)dinSystemAlternateBoldFontWithSize:(CGFloat)fontSize {
+    return [UIFont fontWithName:@"DINAlternate-Bold" size:fontSize];
+}
+
++ (UIFont *)dinAlternateMediumFontWithSize:(CGFloat)fontSize {
+    return [UIFont fontWithName:@"DINMediumAlternate" size:fontSize];
+}
+
++ (UIFont *)interstateRegularFontWithSize:(CGFloat)fontSize {
+    return [UIFont fontWithName:@"Interstate-Regular" size:fontSize];
+}
+
+
+#pragma mark -
+
+
 + (BOOL)isUserLoggedIn {
     
     BOOL loggedin = NO;

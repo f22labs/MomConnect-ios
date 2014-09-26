@@ -7,8 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
 @interface MCUtilities : NSObject
+
++ (UIFont *)dinSystemAlternateBoldFontWithSize:(CGFloat)fontSize;
++ (UIFont *)dinAlternateMediumFontWithSize:(CGFloat)fontSize;
++ (UIFont *)interstateRegularFontWithSize:(CGFloat)fontSize;
+
 
 + (BOOL)isUserLoggedIn;
 

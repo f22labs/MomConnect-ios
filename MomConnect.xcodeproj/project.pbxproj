@@ -19,6 +19,9 @@
 		7CFD4AEE19D5CE4200005FE5 /* MCHomeViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AED19D5CE4200005FE5 /* MCHomeViewLayout.m */; };
 		7CFD4AF119D5CF7C00005FE5 /* MCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AF019D5CF7C00005FE5 /* MCUtilities.m */; };
 		7CFD4AF719D5D4CC00005FE5 /* MCHomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4AF619D5D4CC00005FE5 /* MCHomeViewCell.m */; };
+		7CFD4AFD19D5DF5000005FE5 /* din_boldalternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4AFA19D5DF5000005FE5 /* din_boldalternate.ttf */; };
+		7CFD4AFE19D5DF5000005FE5 /* din_mediumalternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4AFB19D5DF5000005FE5 /* din_mediumalternate.ttf */; };
+		7CFD4AFF19D5DF5000005FE5 /* interstate_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4AFC19D5DF5000005FE5 /* interstate_regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		7CFD4AF219D5D37600005FE5 /* MCAppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAppConstants.h; sourceTree = "<group>"; };
 		7CFD4AF519D5D4CC00005FE5 /* MCHomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCHomeViewCell.h; sourceTree = "<group>"; };
 		7CFD4AF619D5D4CC00005FE5 /* MCHomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCHomeViewCell.m; sourceTree = "<group>"; };
+		7CFD4AFA19D5DF5000005FE5 /* din_boldalternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = din_boldalternate.ttf; sourceTree = "<group>"; };
+		7CFD4AFB19D5DF5000005FE5 /* din_mediumalternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = din_mediumalternate.ttf; sourceTree = "<group>"; };
+		7CFD4AFC19D5DF5000005FE5 /* interstate_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = interstate_regular.ttf; sourceTree = "<group>"; };
 		EF631199123C407D90581AC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +118,7 @@
 				7CFD4ADD19D5CD4200005FE5 /* Models */,
 				7CFD4AE119D5CD4200005FE5 /* Utilities */,
 				7CFD4ADC19D5CD4200005FE5 /* Images */,
+				7CFD4AF819D5DF5000005FE5 /* Resources */,
 				7CFD4ADE19D5CD4200005FE5 /* SupportingFiles */,
 				7CFD4AD719D5CD4200005FE5 /* Base.lproj */,
 				7CFD4ABB19D5BF0500005FE5 /* Images.xcassets */,
@@ -207,6 +214,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7CFD4AF819D5DF5000005FE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4AF919D5DF5000005FE5 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7CFD4AF919D5DF5000005FE5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4AFA19D5DF5000005FE5 /* din_boldalternate.ttf */,
+				7CFD4AFB19D5DF5000005FE5 /* din_mediumalternate.ttf */,
+				7CFD4AFC19D5DF5000005FE5 /* interstate_regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,8 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CFD4AE719D5CD4200005FE5 /* Info.plist in Resources */,
+				7CFD4AFD19D5DF5000005FE5 /* din_boldalternate.ttf in Resources */,
 				7CFD4AE619D5CD4200005FE5 /* Main.storyboard in Resources */,
 				7CFD4AE519D5CD4200005FE5 /* LaunchScreen.xib in Resources */,
+				7CFD4AFF19D5DF5000005FE5 /* interstate_regular.ttf in Resources */,
+				7CFD4AFE19D5DF5000005FE5 /* din_mediumalternate.ttf in Resources */,
 				7CFD4ABC19D5BF0500005FE5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

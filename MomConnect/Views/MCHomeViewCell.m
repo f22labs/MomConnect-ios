@@ -8,6 +8,7 @@
 
 #import "MCHomeViewCell.h"
 #import "MCAppConstants.h"
+#import "MCUtilities.h"
 
 @interface MCHomeViewCell ()
 
@@ -38,7 +39,9 @@
     
     self.titleLabel = [[UILabel alloc] initWithFrame:self.bounds];
     self.titleLabel.numberOfLines = 0;
+    self.titleLabel.font = [MCUtilities dinSystemAlternateBoldFontWithSize:15.0];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.titleLabel.textColor = [UIColor whiteColor];
     [self.contentView addSubview:self.titleLabel];
     
     UIView *selectionBgView = [[UIView alloc] init];
