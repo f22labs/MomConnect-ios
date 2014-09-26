@@ -12,7 +12,7 @@
 #import "MCNavigationBarManager.h"
 #import "MCDataCenter.h"
 
-@interface MCTipCreationViewController () <UITextViewDelegate>
+@interface MCTipCreationViewController () <UITextViewDelegate, UITextFieldDelegate>
 {
     CGFloat mContentScrollHeight;
 }
@@ -23,6 +23,9 @@
 
 @property (nonatomic, strong) UILabel *charCountLabel;
 @property (nonatomic, strong) UIButton *clearButton;
+
+@property (nonatomic, strong) UILabel *dayLabel;
+@property (nonatomic, strong) UITextField *dayTextField;
 
 @end
 
@@ -43,9 +46,11 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"New Tip";
-    [[MCNavigationBarManager sharedManager] applyPropertiesForPropertyKey:@"navbar-type1" toViewController:self withTitleView:nil];
+    [[MCNavigationBarManager sharedManager] applyPropertiesForPropertyKey:@"navbar-type4" toViewController:self withTitleView:nil];
     
     [self setupViews];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(OnChangeTextFieldText:) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -81,9 +86,21 @@
     self.textView.clipsToBounds = YES;
     self.textView.delegate = self;
     self.textView.placeholder = @"Add the tip...";
-    self.textView.keyboardType = UIKeyboardTypeTwitter;
+    self.textView.keyboardType = UIKeyboardTypeDefault;
+    self.textView.enablesReturnKeyAutomatically = YES;
+    self.textView.returnKeyType = UIReturnKeyNext;
     self.textView.font = [MCUtilities dinSystemAlternateBoldFontWithSize:15.0];
     [self.bgScrollView addSubview:self.textView];
+    
+    self.dayLabel = [UILabel new];
+    self.dayLabel.text = @"Enter the day number:";
+    self.dayLabel.textColor = [UIColor blackColor];
+    [self.bgScrollView addSubview:self.dayLabel];
+    
+    self.dayTextField = [UITextField new];
+    self.dayTextField.keyboardType = UIKeyboardTypeNumberPad;
+    self.dayTextField.placeholder = @"#day";
+    [self.bgScrollView addSubview:self.dayTextField];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -98,10 +115,21 @@
 
     self.textView.frame = CGRectMake(xVal, yVal, availableWidth, 150.0);
     
-    self.charCountLabel.frame = CGRectMake(CGRectGetMinX(self.textView.frame), CGRectGetMaxY(self.textView.frame) + 5.0, 50, 20);
+    yVal += CGRectGetHeight(self.textView.frame) + 5.0;
+    
+    self.charCountLabel.frame = CGRectMake(CGRectGetMinX(self.textView.frame), yVal, 50, 20);
     
     [self.clearButton sizeToFit];
-    self.clearButton.frame = CGRectMake(CGRectGetMaxX(self.textView.frame) - self.clearButton.frame.size.width,  CGRectGetMaxY(self.textView.frame) + 5.0, self.clearButton.frame.size.width, self.clearButton.frame.size.height);
+    self.clearButton.frame = CGRectMake(CGRectGetMaxX(self.textView.frame) - self.clearButton.frame.size.width,  yVal, self.clearButton.frame.size.width, self.clearButton.frame.size.height);
+    
+    yVal += CGRectGetHeight(self.charCountLabel.frame) + 25.0;
+    
+    [self.dayLabel sizeToFit];
+    self.dayLabel.frame = CGRectMake(xVal, yVal, CGRectGetWidth(self.dayLabel.frame), CGRectGetHeight(self.dayLabel.frame));
+    
+    xVal += CGRectGetWidth(self.dayLabel.frame) + 10;
+    
+    self.dayTextField.frame = CGRectMake(xVal, yVal, 50, CGRectGetHeight(self.dayLabel.frame));
 }
 
 #pragma mark Getters
@@ -132,7 +160,19 @@
 
 #pragma mark - NavigationBar Buttons
 
+- (void)checkForDoneBtnValidation {
+    
+    if (self.textView.text.length && self.dayTextField.text.length > 0) {
+        
+        [self enableDoneButton:YES];
+    }
+    else {
+        [self enableDoneButton:NO];
+    }
+}
+
 - (void)enableDoneButton:(BOOL)enable {
+    
     UIBarButtonItem *doneBtn = self.navigationItem.rightBarButtonItems[0];
     doneBtn.enabled = enable;
 }
@@ -144,10 +184,11 @@
         
         NSLog(@"response: %@",response);
         
+        [self.navigationController popViewControllerAnimated:YES];
+        
     } failureBlock:^(NSError *error) {
         NSLog(@"error: %@",error.description);
     }];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UITextViewDelegate
@@ -160,19 +201,26 @@
         
         if (currentCount > 0) {
             self.clearButton.enabled = YES;
-            [self enableDoneButton:YES];
         }
         else {
-            [self enableDoneButton:NO];
             self.clearButton.enabled = NO;
         }
+        
         if (currentCount > TIP_COMPOSE_MAXIMUM_CHARS) {
             NSString *possibleTitle = [textView.text substringWithRange:NSMakeRange(0, TIP_COMPOSE_MAXIMUM_CHARS)];
             [self.textView setText:possibleTitle];
         }
+
         // Update char count label
         self.charCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)TIP_COMPOSE_MAXIMUM_CHARS - self.textView.text.length];
+        
+        [self checkForDoneBtnValidation];
     }
+}
+
+- (void)OnChangeTextFieldText:(NSNotification *)notification {
+    
+    [self checkForDoneBtnValidation];
 }
 
 @end
