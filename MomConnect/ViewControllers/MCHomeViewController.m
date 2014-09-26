@@ -10,6 +10,9 @@
 #import "MCHomeViewLayout.h"
 #import "MCHomeViewCell.h"
 #import "MCSubscribeViewController.h"
+#import "MCTipCreationViewController.h"
+#import "MCNavigationBarManager.h"
+
 
 @interface MCHomeViewController ()
 
@@ -29,15 +32,16 @@
     
     [super viewDidLoad];
     
+    [[MCNavigationBarManager sharedManager] applyPropertiesForPropertyKey:@"navbar-type1" toViewController:self withTitleView:nil];
+    
+    self.title = @"Mom Connect";
+
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     [self.collectionView setCollectionViewLayout:[MCHomeViewLayout getHomeViewLayoutWithWidth:CGRectGetWidth(self.collectionView.frame)]];
     
-    self.title = @"Mom Connect";
-    
     // Register cell classes
     [self.collectionView registerClass:[MCHomeViewCell class] forCellWithReuseIdentifier:[MCHomeViewCell reuseIdentifier]];
-    
 }
 
 
@@ -98,7 +102,8 @@
     
     switch (indexPath.row) {
         case 0:{
-            //Add a tip
+            MCTipCreationViewController *tipCreationVC = [[MCTipCreationViewController alloc] init];
+            [self.navigationController pushViewController:tipCreationVC animated:YES];
         }
             break;
         case 1:{

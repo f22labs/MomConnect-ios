@@ -24,6 +24,18 @@
 		7CFD4AFD19D5DF5000005FE5 /* din_boldalternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4AFA19D5DF5000005FE5 /* din_boldalternate.ttf */; };
 		7CFD4AFE19D5DF5000005FE5 /* din_mediumalternate.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4AFB19D5DF5000005FE5 /* din_mediumalternate.ttf */; };
 		7CFD4AFF19D5DF5000005FE5 /* interstate_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4AFC19D5DF5000005FE5 /* interstate_regular.ttf */; };
+		7CFD4B0219D5E6F500005FE5 /* MCTipCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B0119D5E6F500005FE5 /* MCTipCreationViewController.m */; };
+		7CFD4B0A19D5EEDE00005FE5 /* MCBackNavigationButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B0519D5EEDE00005FE5 /* MCBackNavigationButtonView.m */; };
+		7CFD4B0B19D5EEDE00005FE5 /* MCBarButtonItemsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B0719D5EEDE00005FE5 /* MCBarButtonItemsFactory.m */; };
+		7CFD4B0C19D5EEDE00005FE5 /* MCNavigationBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B0919D5EEDE00005FE5 /* MCNavigationBarManager.m */; };
+		7CFD4B0F19D5EFE800005FE5 /* back_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CFD4B0E19D5EFE800005FE5 /* back_icon@2x.png */; };
+		7CFD4B1319D5FEFB00005FE5 /* MCDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B1219D5FEFB00005FE5 /* MCDataCenter.m */; };
+		7CFD4B2019D5FF4100005FE5 /* NSObject+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B1819D5FF4100005FE5 /* NSObject+MKBlockAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CFD4B2119D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B1A19D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CFD4B2219D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B1C19D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CFD4B2319D5FF4100005FE5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B1F19D5FF4100005FE5 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7CFD4B2719D5FF7000005FE5 /* PSPDFUIKitMainThreadGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B2419D5FF7000005FE5 /* PSPDFUIKitMainThreadGuard.m */; };
+		7CFD4B2819D5FF7000005FE5 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFD4B2619D5FF7000005FE5 /* UIView+Screenshot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +77,29 @@
 		7CFD4AFA19D5DF5000005FE5 /* din_boldalternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = din_boldalternate.ttf; sourceTree = "<group>"; };
 		7CFD4AFB19D5DF5000005FE5 /* din_mediumalternate.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = din_mediumalternate.ttf; sourceTree = "<group>"; };
 		7CFD4AFC19D5DF5000005FE5 /* interstate_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = interstate_regular.ttf; sourceTree = "<group>"; };
+		7CFD4B0019D5E6F500005FE5 /* MCTipCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCTipCreationViewController.h; sourceTree = "<group>"; };
+		7CFD4B0119D5E6F500005FE5 /* MCTipCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCTipCreationViewController.m; sourceTree = "<group>"; };
+		7CFD4B0419D5EEDE00005FE5 /* MCBackNavigationButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBackNavigationButtonView.h; sourceTree = "<group>"; };
+		7CFD4B0519D5EEDE00005FE5 /* MCBackNavigationButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBackNavigationButtonView.m; sourceTree = "<group>"; };
+		7CFD4B0619D5EEDE00005FE5 /* MCBarButtonItemsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBarButtonItemsFactory.h; sourceTree = "<group>"; };
+		7CFD4B0719D5EEDE00005FE5 /* MCBarButtonItemsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBarButtonItemsFactory.m; sourceTree = "<group>"; };
+		7CFD4B0819D5EEDE00005FE5 /* MCNavigationBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNavigationBarManager.h; sourceTree = "<group>"; };
+		7CFD4B0919D5EEDE00005FE5 /* MCNavigationBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNavigationBarManager.m; sourceTree = "<group>"; };
+		7CFD4B0E19D5EFE800005FE5 /* back_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_icon@2x.png"; sourceTree = "<group>"; };
+		7CFD4B1119D5FEFB00005FE5 /* MCDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDataCenter.h; sourceTree = "<group>"; };
+		7CFD4B1219D5FEFB00005FE5 /* MCDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDataCenter.m; sourceTree = "<group>"; };
+		7CFD4B1619D5FF4100005FE5 /* MKBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBlockAdditions.h; sourceTree = "<group>"; };
+		7CFD4B1719D5FF4100005FE5 /* NSObject+MKBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MKBlockAdditions.h"; sourceTree = "<group>"; };
+		7CFD4B1819D5FF4100005FE5 /* NSObject+MKBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MKBlockAdditions.m"; sourceTree = "<group>"; };
+		7CFD4B1919D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+MKBlockAdditions.h"; sourceTree = "<group>"; };
+		7CFD4B1A19D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+MKBlockAdditions.m"; sourceTree = "<group>"; };
+		7CFD4B1B19D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKBlockAdditions.h"; sourceTree = "<group>"; };
+		7CFD4B1C19D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKBlockAdditions.m"; sourceTree = "<group>"; };
+		7CFD4B1E19D5FF4100005FE5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7CFD4B1F19D5FF4100005FE5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7CFD4B2419D5FF7000005FE5 /* PSPDFUIKitMainThreadGuard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPDFUIKitMainThreadGuard.m; sourceTree = "<group>"; };
+		7CFD4B2519D5FF7000005FE5 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		7CFD4B2619D5FF7000005FE5 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		EF631199123C407D90581AC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,11 +153,14 @@
 		7CFD4AAD19D5BF0500005FE5 /* MomConnect */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD4B1419D5FF3800005FE5 /* External */,
 				7CFD4AD419D5CD4200005FE5 /* AppDelegate */,
 				7CFD4AE219D5CD4200005FE5 /* ViewControllers */,
 				7CFD4AE319D5CD4200005FE5 /* Views */,
 				7CFD4ADD19D5CD4200005FE5 /* Models */,
+				7CFD4B1019D5FEE500005FE5 /* DataCenter */,
 				7CFD4AE119D5CD4200005FE5 /* Utilities */,
+				7CFD4B0319D5EEDE00005FE5 /* NavigationItems */,
 				7CFD4ADC19D5CD4200005FE5 /* Images */,
 				7CFD4AF819D5DF5000005FE5 /* Resources */,
 				7CFD4ADE19D5CD4200005FE5 /* SupportingFiles */,
@@ -170,6 +208,7 @@
 		7CFD4ADC19D5CD4200005FE5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD4B0D19D5EFE800005FE5 /* Global */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -195,6 +234,9 @@
 		7CFD4AE119D5CD4200005FE5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD4B2419D5FF7000005FE5 /* PSPDFUIKitMainThreadGuard.m */,
+				7CFD4B2519D5FF7000005FE5 /* UIView+Screenshot.h */,
+				7CFD4B2619D5FF7000005FE5 /* UIView+Screenshot.m */,
 				7CFD4AEF19D5CF7C00005FE5 /* MCUtilities.h */,
 				7CFD4AF019D5CF7C00005FE5 /* MCUtilities.m */,
 				7CFD4AF219D5D37600005FE5 /* MCAppConstants.h */,
@@ -207,6 +249,8 @@
 		7CFD4AE219D5CD4200005FE5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7CFD4B0019D5E6F500005FE5 /* MCTipCreationViewController.h */,
+				7CFD4B0119D5E6F500005FE5 /* MCTipCreationViewController.m */,
 				7CFD4AE919D5CDAA00005FE5 /* MCHomeViewController.h */,
 				7CFD4AEA19D5CDAA00005FE5 /* MCHomeViewController.m */,
 				7697550219D5EC8000F467F0 /* MCSubscribeViewController.h */,
@@ -240,6 +284,68 @@
 				7CFD4AFC19D5DF5000005FE5 /* interstate_regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7CFD4B0319D5EEDE00005FE5 /* NavigationItems */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4B0419D5EEDE00005FE5 /* MCBackNavigationButtonView.h */,
+				7CFD4B0519D5EEDE00005FE5 /* MCBackNavigationButtonView.m */,
+				7CFD4B0619D5EEDE00005FE5 /* MCBarButtonItemsFactory.h */,
+				7CFD4B0719D5EEDE00005FE5 /* MCBarButtonItemsFactory.m */,
+				7CFD4B0819D5EEDE00005FE5 /* MCNavigationBarManager.h */,
+				7CFD4B0919D5EEDE00005FE5 /* MCNavigationBarManager.m */,
+			);
+			path = NavigationItems;
+			sourceTree = "<group>";
+		};
+		7CFD4B0D19D5EFE800005FE5 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4B0E19D5EFE800005FE5 /* back_icon@2x.png */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		7CFD4B1019D5FEE500005FE5 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4B1119D5FEFB00005FE5 /* MCDataCenter.h */,
+				7CFD4B1219D5FEFB00005FE5 /* MCDataCenter.m */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		7CFD4B1419D5FF3800005FE5 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4B1519D5FF4100005FE5 /* MKAdditions */,
+				7CFD4B1D19D5FF4100005FE5 /* Reachability */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		7CFD4B1519D5FF4100005FE5 /* MKAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4B1619D5FF4100005FE5 /* MKBlockAdditions.h */,
+				7CFD4B1719D5FF4100005FE5 /* NSObject+MKBlockAdditions.h */,
+				7CFD4B1819D5FF4100005FE5 /* NSObject+MKBlockAdditions.m */,
+				7CFD4B1919D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.h */,
+				7CFD4B1A19D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.m */,
+				7CFD4B1B19D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.h */,
+				7CFD4B1C19D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.m */,
+			);
+			path = MKAdditions;
+			sourceTree = "<group>";
+		};
+		7CFD4B1D19D5FF4100005FE5 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7CFD4B1E19D5FF4100005FE5 /* Reachability.h */,
+				7CFD4B1F19D5FF4100005FE5 /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +436,7 @@
 				7CFD4AE519D5CD4200005FE5 /* LaunchScreen.xib in Resources */,
 				7CFD4AFF19D5DF5000005FE5 /* interstate_regular.ttf in Resources */,
 				7CFD4AFE19D5DF5000005FE5 /* din_mediumalternate.ttf in Resources */,
+				7CFD4B0F19D5EFE800005FE5 /* back_icon@2x.png in Resources */,
 				7CFD4ABC19D5BF0500005FE5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,11 +489,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CFD4AE819D5CD4200005FE5 /* main.m in Sources */,
+				7CFD4B2819D5FF7000005FE5 /* UIView+Screenshot.m in Sources */,
+				7CFD4B2219D5FF4100005FE5 /* UIAlertView+MKBlockAdditions.m in Sources */,
+				7CFD4B2119D5FF4100005FE5 /* UIActionSheet+MKBlockAdditions.m in Sources */,
 				7CFD4AE419D5CD4200005FE5 /* AppDelegate.m in Sources */,
+				7CFD4B2319D5FF4100005FE5 /* Reachability.m in Sources */,
+				7CFD4B0C19D5EEDE00005FE5 /* MCNavigationBarManager.m in Sources */,
 				7CFD4AEB19D5CDAA00005FE5 /* MCHomeViewController.m in Sources */,
 				7CFD4AF719D5D4CC00005FE5 /* MCHomeViewCell.m in Sources */,
 				7697550519D5EC8000F467F0 /* MCSubscribeViewController.m in Sources */,
 				7CFD4AF119D5CF7C00005FE5 /* MCUtilities.m in Sources */,
+				7CFD4B2719D5FF7000005FE5 /* PSPDFUIKitMainThreadGuard.m in Sources */,
+				7CFD4B0A19D5EEDE00005FE5 /* MCBackNavigationButtonView.m in Sources */,
+				7CFD4B2019D5FF4100005FE5 /* NSObject+MKBlockAdditions.m in Sources */,
+				7CFD4B0B19D5EEDE00005FE5 /* MCBarButtonItemsFactory.m in Sources */,
+				7CFD4B0219D5E6F500005FE5 /* MCTipCreationViewController.m in Sources */,
+				7CFD4B1319D5FEFB00005FE5 /* MCDataCenter.m in Sources */,
 				7CFD4AEE19D5CE4200005FE5 /* MCHomeViewLayout.m in Sources */,
 				76D33C0D19D604AD006E4020 /* PhoneField.m in Sources */,
 			);
@@ -512,6 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/MomConnect/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -523,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/MomConnect/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

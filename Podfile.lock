@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - SZTextView (1.1.8)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.4)
+  - SZTextView (~> 1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  SZTextView: 0c199e604541d8065ef23f47d98e7fa694512852
 
 COCOAPODS: 0.33.1

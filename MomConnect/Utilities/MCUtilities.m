@@ -7,6 +7,7 @@
 //
 
 #import "MCUtilities.h"
+#import "MCAppConstants.h"
 
 @implementation MCUtilities
 
@@ -22,6 +23,32 @@
 
 + (UIFont *)interstateRegularFontWithSize:(CGFloat)fontSize {
     return [UIFont fontWithName:@"Interstate-Regular" size:fontSize];
+}
+
+#pragma mark -
+
++ (UIFont *)navBarTitleFont {
+    return [MCUtilities dinSystemAlternateBoldFontWithSize:17.0];
+}
+
++ (UIColor *)navBarTitleTextColor {
+    return [UIColor blackColor];
+}
+
++ (UIColor *)navBarTintColor {
+    return UIColorFromRGB(0xe9ebec);
+}
+
+#pragma mark -
+
++ (BOOL)checkNullValue:(id)object {
+    
+    return [object isEqual:[NSNull null]] || [[NSString stringWithFormat:@"%@", object] isEqualToString:@"<null>"] || object == nil || [[NSString stringWithFormat:@"%@", object] isEqualToString:@"(null)"];
+}
+
++ (BOOL)checkEmptyStringValue:(id)object {
+    
+    return [self checkNullValue:object] || [[NSString stringWithFormat:@"%@",object] isEqualToString:@""];
 }
 
 

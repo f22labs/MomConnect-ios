@@ -15,6 +15,12 @@
 + (UIFont *)dinAlternateMediumFontWithSize:(CGFloat)fontSize;
 + (UIFont *)interstateRegularFontWithSize:(CGFloat)fontSize;
 
++ (UIFont *)navBarTitleFont;
++ (UIColor *)navBarTitleTextColor;
++ (UIColor *)navBarTintColor;
+
++ (BOOL)checkNullValue:(id)object;
++ (BOOL)checkEmptyStringValue:(id)object;
 
 + (BOOL)isUserLoggedIn;
 
