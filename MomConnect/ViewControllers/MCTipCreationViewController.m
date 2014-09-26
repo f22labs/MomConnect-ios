@@ -182,7 +182,8 @@
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
     //POST /tips parameters are what: "eat your food" and when: 19 (it means on 19th  day from coneption)
-    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"tips" urlParameters:@{@"what":self.textView.text, @"when":self.dayTextField.text} requestType:PostRequestType successBlock:^(id response) {
+    // tip: {what: 'vjnrjvj', when: 23} }
+    [[MCDataCenter sharedCenter] getResponseWithUrlEndPoint:@"tips" urlParameters:@{@"tip":@{@"what":self.textView.text, @"when":self.dayTextField.text}} requestType:PostRequestType successBlock:^(id response) {
         
         NSLog(@"response: %@",response);
         
